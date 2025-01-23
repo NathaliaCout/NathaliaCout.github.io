@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Barra superior */
+.barra-superior {
+    background-color: #f2f3f7;
+    height: 64px;
+    border-bottom: 1px solid #f2f3f7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.container-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.espaco-vazio {
+    width: 33%;
+}
+
+h1 {
+    width: 33%;
+    text-align: center;
+    font-size: 24px;
+}
+
+.navegacao {
+    width: 33%;
+    text-align: right;
+}
+
+.navegacao a {
+    color: #0066cc;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.navegacao span {
+    color: #666;
+}
+
+/* Conteúdo principal */
+.conteudo-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 80px 20px 20px;
+}
+
+.container-projeto {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Carrossel */
+.carrossel {    
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Proporção 16:9 */
+}
+
+.imagens {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.imagens img {    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s;    
+}
+
+.imagens img.ativa {
+    opacity: 1;
+}
+
+/* Botões de navegação */
+.botao-anterior,
+.botao-proximo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.botao-anterior {
+    left: 10px;
+}
+
+.botao-proximo {
+    right: 10px;
+}
+
+/* Indicadores */
+.indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.indicador {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+    border: none;
+    cursor: pointer;
+}
+
+.indicador.ativo {
+    background: #0066cc;
+}
+
+/* Informações do projeto */
+.info-projeto {
+    flex: 1;
+}
+
+.info-projeto h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.linha {
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.rotulo {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.valor {
+    color: #666;
+}
+
+/* Media queries para responsividade */
+@media (min-width: 768px) {
+    .container-projeto {
+        flex-direction: row;
+    }
+
+    .carrossel {
+        flex: 1;
+        padding-top: 0;
+        height: 400px;
+    }
+
+    .info-projeto {
+        flex: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .barra-superior {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .container-header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .espaco-vazio, h1, .navegacao {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .conteudo-principal {
+        padding-top: 150px;
+    }
+}
