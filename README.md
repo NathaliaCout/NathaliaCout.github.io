@@ -4,7 +4,7 @@ Bem-vindo ao repositório do meu portfólio! Aqui você encontrará informaçõe
 
 ## 🌐 Sobre o Projeto
 
-Este portfólio foi criado como uma forma de apresentar meu trabalho e minha trajetória profissional, destacando minha transição para o desenvolvimento web e meus conhecimentos em administração de sistemas.
+Este portfólio foi criado como uma forma de apresentar meu trabalho e minha trajetória profissional, destacando minha transição para o  DevOps e meus conhecimentos em administração de sistemas.
 
 - **Site do Portfólio**: [nathaliacout.github.io](https://nathaliacout.github.io/)
 
